@@ -24,19 +24,19 @@ const theme = createTheme({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<App />}></Route>
-          <Route path="/simple-calc" element={<SimpleCalc />}></Route>
-          <Route path="/old-calc" element={<OldCalc />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
-  </React.StrictMode>
+
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<App />}></Route>
+        <Route path="/simple-calc" element={<SimpleCalc />}></Route>
+        <Route path="/old-calc" element={<OldCalc />}></Route>
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
