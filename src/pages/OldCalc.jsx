@@ -13,7 +13,7 @@ function OldCalc() {
   const parseInput = (input) => {
     if (input.includes('ang')) {
       const [r, theta] = input.split('ang').map(Number);
-      const thetaRadians = math.unit(theta, "deg").toNumber('rad');
+      const thetaRadians = math.unit(theta, 'deg').toNumber('rad');
       return math.complex({ r: r, phi: thetaRadians });
     } else {
       return math.complex(input);
