@@ -91,7 +91,7 @@ function SimpleCalc() {
           <Grid item xs={9} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
               {['1', '2', '3'].map((val) => (
-                <Button key={val} variant='contained' onClick={() => addToInput(val)} sx={{ width: '90px' }}>
+                <Button key={val} variant='contained' onClick={() => addToInput(val)} sx={{ width: '4.67vw' }}>
                   {val}
                 </Button>
               ))}
