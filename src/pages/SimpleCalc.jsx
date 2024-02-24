@@ -95,7 +95,7 @@ function SimpleCalc() {
           ))}
 
           <Grid item xs={3}>
-            <Button fullWidth variant='outlined' onClick={() => calculateResult()}>=</Button>
+            <Button fullWidth variant='outlined' onClick={() => calculateResult()} style={{ height: '100%' }}>=</Button>
           </Grid>
 
           <Grid item xs={6}>
