@@ -25,7 +25,7 @@ function SimpleCalc() {
 
   return (
     <Container maxWidth='xs'>
-      <Box display='flex' justifyContent='center' alignItems='center' minHeight='100vh'>
+      <Box display='flex' justifyContent='center' alignItems='center' minHeight='90vh'>
         <Grid container spacing={1.5}>
           <Grid item xs={12}>
             <Grid item xs={3}>
@@ -49,11 +49,9 @@ function SimpleCalc() {
           </Grid>
 
           <Grid item xs={3}>
-            <Button fullWidth variant='outlined'>?</Button>
           </Grid>
 
           <Grid item xs={3}>
-            <Button fullWidth variant='outlined'>?</Button>
           </Grid>
 
           {['i', 'ang'].map((val) => (
@@ -63,7 +61,6 @@ function SimpleCalc() {
           ))}
 
           <Grid item xs={3}>
-            <Button fullWidth variant='outlined'>?</Button>
           </Grid>
 
           {['+/-', '/', '*', '-'].map((val) => (
@@ -82,32 +79,36 @@ function SimpleCalc() {
             <Button fullWidth variant='outlined' onClick={() => addToInput('+')}>+</Button>
           </Grid>
 
-          {['4', '5', '6', ''].map((val) => (
+          {['4', '5', '6'].map((val) => (
             <Grid item xs={3} key={val}>
               <Button fullWidth variant='contained' onClick={() => addToInput(val)}>{val}</Button>
             </Grid>
           ))}
 
-          {['1', '2', '3'].map((val) => (
-            <Grid item xs={3} key={val}>
-              <Button fullWidth variant='contained' onClick={() => addToInput(val)}>{val}</Button>
-            </Grid>
-          ))}
+          <Grid item xs={3}>
+          </Grid>
+
+          <Grid item xs={9} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              {['1', '2', '3'].map((val) => (
+                <Button key={val} variant='contained' onClick={() => addToInput(val)} sx={{ width: '90px' }}>
+                  {val}
+                </Button>
+              ))}
+            </Box>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+              <Button variant='contained' onClick={() => addToInput('0')} sx={{ width: '192px', marginRight: '10px' }}>0</Button>
+              <Button variant='contained' onClick={() => addToInput('.')} sx={{ width: '90px' }}>.</Button>
+            </Box>
+          </Grid>
 
           <Grid item xs={3}>
             <Button fullWidth variant='outlined' onClick={() => calculateResult()} style={{ height: '100%' }}>=</Button>
           </Grid>
 
-          <Grid item xs={6}>
-            <Button fullWidth variant='contained' onClick={() => addToInput('0')}>0</Button>
-          </Grid>
-
-          <Grid item xs={3}>
-            <Button fullWidth variant='contained' onClick={() => addToInput('.')}>.</Button>
-          </Grid>
         </Grid>
       </Box>
-    </Container>
+    </Container >
   );
 }
 
